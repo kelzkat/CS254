@@ -11,11 +11,12 @@ import java.net.*;
  */
 public class tomerlin {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws UnknownHostException,
+            IOException {
 
-        ServerSocket test = new ServerSocket(500);
+        ServerSocket test = new ServerSocket(0);
         int port = test.getLocalPort();
-        Socket socket = new Socket("11.144.9.921", 500);
+        Socket socket = new Socket("10.100.1.239", 255);
         System.out.println("Connection accepted: " + socket);
         DataInputStream dIS = new DataInputStream(System.in);
         System.out.println("");
